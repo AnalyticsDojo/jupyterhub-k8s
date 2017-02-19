@@ -8,18 +8,18 @@ name: 'datahub-dev'
 
 hub:
   image:
-    name: gcr.io/data-8/jupyterhub-k8s-hub
-    tag: null  # Must be overriden
+    name: gcr.io/analyticsdojo-dev/jupyterhub-k8s-hub
+    tag: 1d3f870
 
 proxy:
   image:
-    name: gcr.io/data-8/jupyterhub-k8s-proxy
-    tag: null  # Must be overriden
+    name: gcr.io/analyticsdojo-dev/jupyterhub-k8s-proxy
+    tag: bb74350
 
 # Set this explicitly if you want to use a static allocated
 # IP as the public LoadBalancer IP. Requires support by
 # your Cloud Provider. GKE supports this
-publicIP: null
+publicIP: true
 
 # Google OAuth secrets
 auth:
@@ -40,7 +40,7 @@ singleuser:
     capacity: 10Gi
   image:
     name: gcr.io/data-8/jupyterhub-k8s-singleuser
-    tag: null # Must be overriden
+    tag: 45d43dc
   cpu:
     limit: null
     guarantee: null
